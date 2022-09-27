@@ -1,7 +1,7 @@
 ![image](https://user-images.githubusercontent.com/82112471/191800203-0563a725-4b6a-4caf-9d3b-29239960b0d6.png)
 
 # ps-microphone
-Script to enhance as a microphone/loudspeaker when an user enters a define zoned. 
+Script to enhance as a microphone/loudspeaker using qb-target and spawn object !
 
 # Installation
 

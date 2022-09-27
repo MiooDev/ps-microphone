@@ -4,7 +4,7 @@ game 'gta5'
 description 'Project Sloth Microphone Script'
 
 client_scripts {
-  'client/main.lua',
+  'client/mic.lua',
   'client/megaphone.lua',
 }
 

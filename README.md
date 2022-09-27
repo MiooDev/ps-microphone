@@ -48,9 +48,9 @@ Config.MicrophoneZones = {
 ```
 
 # Dependecies
+# [qb-target](https://github.com/qbcore-framework/qb-target)
 * Latest [pma-voice](https://github.com/AvarianKnight/pma-voice) 
 * [ps-zones](https://github.com/Project-Sloth/ps-zones)
-# [qb-target](https://github.com/qbcore-framework/qb-target)
 
 # Credits 
 * [Snipe](https://github.com/pushkart2)

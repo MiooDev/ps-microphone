@@ -1,15 +1,13 @@
-local oldProximity = 0.0
+local QBCore = exports['qb-core']:GetCoreObject()
 
-local prop = "v_ilev_fos_mic"
-
-function string.starts(String,Start)    
-    return string.sub(String,1,string.len(Start))==Start 
-end
-CreateThread(function()
-    for k, v in pairs(Config.MicrophoneZones) do
-        exports["ps-zones"]:CreateBoxZone("microphone_"..v.name, v.coords, v.length, v.width, v.data)
-    end
-end)
+local prop = "v_club_roc_micstd"
+local usingMic = false
+local entity = {
+    'prop_podium_mic',
+    'prop_table_mic_01',
+    'v_ilev_fos_mic',
+    'v_club_roc_micstd'
+}
 
 Citizen.CreateThread(function()
 	while true do
@@ -20,7 +18,7 @@ Citizen.CreateThread(function()
         for k,v in ipairs(Config.MicrophoneZones) do
             if v.spawnProp then
                 local dist = #(pos - v.coords)
-                if dist <= 150.0 then
+                if dist <= 100.0 then
                     if v.obj == nil then
                         local obj = CreateObject(GetHashKey(prop), vector3(v.coords.x, v.coords.y, v.coords.z - 1.0), false)
                         if v.data.heading ~= nil then
@@ -43,17 +41,31 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
-RegisterNetEvent("ps-zones:enter", function(ZoneName, ZoneData)
-    if string.starts(ZoneName, "microphone_") then
-        oldProximity =  LocalPlayer.state['proximity'].distance
-        exports["pma-voice"]:overrideProximityRange(ZoneData.range, true)
+
+RegisterNetEvent('microphone:toggle', function()
+	if not usingMic then
+        exports["pma-voice"]:overrideProximityRange(60, true)
+        usingMic = true
+        QBCore.Functions.Notify('Microphone On', 'success')
+    else
+        exports["pma-voice"]:clearProximityOverride()
+        usingMic = false
+        QBCore.Functions.Notify('Microphone Off', 'error')
     end
 end)
 
-RegisterNetEvent("ps-zones:leave", function(ZoneName, ZoneData)
-    if string.starts(ZoneName, "microphone_") then
-        exports["pma-voice"]:clearProximityOverride()
-    end
+Citizen.CreateThread(function()
+    exports['qb-target']:AddTargetModel(entity, {
+        options = {
+            {
+                type = "client",
+                event = "microphone:toggle",
+                label = 'Use Mic',
+                icon = 'fa-solid fa-microphone',
+            },
+        },
+        distance = 2.5,
+    })
 end)
 
 AddEventHandler('onResourceStop', function(resource)

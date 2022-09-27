@@ -16,7 +16,7 @@ Script to enhance as a microphone/loudspeaker when an user enters a define zoned
     {
         Prop = 'prop_megaphone_01',
         PropBone = 28422,
-        PropPlacement = {0.0, 0.0, 0.0, 0.0, 0.0, 80.0},
+        PropPlacement = {0.04, -0.01, 0.0, 22.0, -4.0, 87.0},
         EmoteLoop = true,
         EmoteMoving = true,
     }},

